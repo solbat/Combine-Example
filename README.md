@@ -8,3 +8,5 @@
 - String 값을 방출하는 Publisher들에 대해 `CombineLatest()` 수행, 값 일치 여부에 따른 Bool 값을 방출
 - VC에서 ViewModel의 Bool 값을 구독하여 버튼의 `isValid` 프로퍼티와 바인딩
 - 버튼의 `isValid` 프로퍼티에 따른 버튼 배경 색상 및 글자색 변경
+
+![Simulator Screen Recording - iPhone 14 Pro - 2023-01-03 at 15 32 01](https://user-images.githubusercontent.com/77015330/210311176-f10289f0-466a-42e3-b11f-ea22ca49e07e.gif)
