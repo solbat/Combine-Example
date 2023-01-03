@@ -13,9 +13,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordConfirmTextField: UITextField!
     @IBOutlet weak var myButton: UIButton!
     
+    var viewModel: MyViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        viewModel = MyViewModel()
+        
     }
 
 
