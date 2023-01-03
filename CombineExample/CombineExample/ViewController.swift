@@ -26,3 +26,17 @@ class ViewController: UIViewController {
 
 }
 
+extension UITextField {
+    var myTextPublisher: AnyPublisher<String, Never> {
+        NotificationCenter.default.publisher(for: UITextField.textDidChangeNotification, object: self)
+//            .print()
+            // UITextField 가져옴
+            .compactMap { $0.object as? UITextField }
+            // String 가져옴
+            .map { $0.text ?? "" }
+            .print() // receive value: (\($0))
+            // AnyPublisher로 퉁치기
+            .eraseToAnyPublisher()
+    }
+}
+
