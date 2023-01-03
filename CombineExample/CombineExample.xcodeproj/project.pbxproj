@@ -13,6 +13,7 @@
 		CEB132142963D09A00A5156B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB132122963D09A00A5156B /* Main.storyboard */; };
 		CEB132162963D09D00A5156B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB132152963D09D00A5156B /* Assets.xcassets */; };
 		CEB132192963D09D00A5156B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB132172963D09D00A5156B /* LaunchScreen.storyboard */; };
+		CEB132212963E58D00A5156B /* MyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB132202963E58D00A5156B /* MyViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CEB132152963D09D00A5156B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEB132182963D09D00A5156B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEB1321A2963D09D00A5156B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEB132202963E58D00A5156B /* MyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				CEB1320C2963D09A00A5156B /* AppDelegate.swift */,
 				CEB1320E2963D09A00A5156B /* SceneDelegate.swift */,
 				CEB132102963D09A00A5156B /* ViewController.swift */,
+				CEB132202963E58D00A5156B /* MyViewModel.swift */,
 				CEB132122963D09A00A5156B /* Main.storyboard */,
 				CEB132152963D09D00A5156B /* Assets.xcassets */,
 				CEB132172963D09D00A5156B /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				CEB132112963D09A00A5156B /* ViewController.swift in Sources */,
 				CEB1320D2963D09A00A5156B /* AppDelegate.swift in Sources */,
+				CEB132212963E58D00A5156B /* MyViewModel.swift in Sources */,
 				CEB1320F2963D09A00A5156B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
