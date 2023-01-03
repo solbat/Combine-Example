@@ -46,3 +46,28 @@ NotificationCenter.default.post(Notification(name: myNotification))
 
 //mySubscription?.cancel()
 
+
+// KVO - Key-Value Observing
+class MyFriend {
+    var name = "철수" {
+        // 값이 변경되면 실행
+        didSet {
+            print("name - didSet() : ", name)
+        }
+    }
+}
+
+var myFriend = MyFriend()
+
+var myFriendSubscription: AnyCancellable = ["영수", "진희"].publisher.assign(to: \.name, on: myFriend) // myFriend 인스턴스의 name 프로퍼티에 assign
+
+myIntArrayPublisher.sink(receiveCompletion: { completion in
+    switch completion {
+    case .finished:
+        print("완료")
+    case .failure(let error): // Never이기 때문에 에러가 발생하지는 않음
+        print("실패 : error : \(error)")
+    }
+}, receiveValue: { receivedValue in
+    print("값을 받았다. : \(receivedValue)")
+})
