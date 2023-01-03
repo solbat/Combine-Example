@@ -59,3 +59,15 @@ extension UITextField {
     }
 }
 
+extension UIButton {
+    var isValid: Bool {
+        get {
+            backgroundColor == .yellow
+        }
+        set {
+            backgroundColor = newValue ? .yellow : .lightGray
+            isEnabled = newValue
+            setTitleColor(newValue ? .blue : .white, for: .normal)
+        }
+    }
+}
