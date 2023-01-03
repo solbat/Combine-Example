@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class ViewController: UIViewController {
 
@@ -28,6 +29,15 @@ class ViewController: UIViewController {
             .receive(on: DispatchQueue.main)
             // KVO 방식으로 구독
             .assign(to: \.passwordInput, on: viewModel)
+            .store(in: &mySubscriptions)
+        
+        passwordConfirmTextField
+            .myTextPublisher
+//            .print()
+            // 다른 스레드와 같이 작업하기 때문에 RunLoop로 돌리겠다
+            .receive(on: RunLoop.main)
+            // KVO 방식으로 구독
+            .assign(to: \.passwordConfirmInput, on: viewModel)
             .store(in: &mySubscriptions)
         
     }
