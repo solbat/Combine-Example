@@ -15,11 +15,20 @@ class ViewController: UIViewController {
     
     var viewModel: MyViewModel!
     
+    private var mySubscriptions = Set<AnyCancellable>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         viewModel = MyViewModel()
+        
+        passwordTextField
+            .myTextPublisher
+            // 스레드 - 메인에서 받겠다
+            .receive(on: DispatchQueue.main)
+            // KVO 방식으로 구독
+            .assign(to: \.passwordInput, on: viewModel)
+            .store(in: &mySubscriptions)
         
     }
 
