@@ -40,6 +40,14 @@ class ViewController: UIViewController {
             .assign(to: \.passwordConfirmInput, on: viewModel)
             .store(in: &mySubscriptions)
         
+        // 버튼이 뷰모델의 퍼블리셔를 구독
+        viewModel.isMatchPasswordInput
+            // 다른 스레드와 같이 작업하기 때문에 RunLoop로 돌리겠다
+            .receive(on: RunLoop.main)
+            // 구독
+            .assign(to: \.isValid, on: myButton)
+            .store(in: &mySubscriptions)
+        
     }
 
 
