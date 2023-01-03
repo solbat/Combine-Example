@@ -21,4 +21,16 @@ class MyViewModel {
             print("MyViewModel / passwordConfirmInput: \(passwordConfirmInput)")
         }
     }
+    
+    // 들어온 퍼블리셔들의 값 일치 여부를 반환하는 퍼블리셔
+    lazy var isMatchPasswordInput: AnyPublisher<Bool, Never> = Publishers
+        .CombineLatest($passwordInput, $passwordConfirmInput)
+        .map({ (password: String, passwordConfirm: String) in
+            if password == "" || passwordConfirm == "" {
+                return false
+            }
+            return password == passwordConfirm ? true : false
+        })
+        .print()
+        .eraseToAnyPublisher()
 }
