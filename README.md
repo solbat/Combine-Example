@@ -1,4 +1,4 @@
-## Combine Example
+## Combine UITextField Example
 
 ### `Combine`을 활용하여 `UITextField` 비밀번호 일치 여부 구현
 
