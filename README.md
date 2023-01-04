@@ -1,6 +1,6 @@
 ## Combine Example
 
-### `Combine`을 활용하여 `UITextField`와 `UIButton`에 대하여 비밀번호 일치 여부 구현
+### `Combine`을 활용하여 `UITextField` 비밀번호 일치 여부 구현
 
 - `UITextField`의 `textDidChangeNotification`에 대한 Publisher 생성
 - `UITextField`에서 방출하는 String 값과 ViewModel Input과 바인딩
